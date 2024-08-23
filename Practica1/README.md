@@ -12,3 +12,25 @@ d) Cree otro objeto de tipo Vacuna y compárelo con el anterior. ¿Qué método 
 e) Ejecute la aplicación fuera del entorno de desarrollo. ¿Para que se utiliza la variable de entorno CLASSPATH?
 
 f) Construya un archivo jar con las clases anteriores, ejecútelo desde la línea de comandos. ¿Dónde se especifica en el archivo jar la clase que contiene el método main?
+
+2.- Analice las siguientes clases y responda cada uno de los incisos que figuran a continuación.
+
+a) Considere la siguiente clase Alpha. ¿Es válido el acceso de la clase Gamma?. Justifique.
+
+~~~
+package griego;
+class Alpha {
+protected int x;
+protected void otroMetodoA(){
+System.out.println(“Un método protegido”);
+}
+}
+package griego;
+class Gamma {
+void unMétodoG(){
+Alpha a = new Alpha();
+a.x=10;
+a.otroMetodoA();
+}
+}
+~~~
