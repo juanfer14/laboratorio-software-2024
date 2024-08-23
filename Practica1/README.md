@@ -130,4 +130,4 @@ public class Dialoguito extends Dialog {
 }
 ~~~
 
-<u>Nota</u>: Recuerde que en la url <https://docs.oracle.com/en/java/javase/19/docs/api/> tiene disponible al documentación de la API de java
+<ins>Nota</ins>: Recuerde que en la url <https://docs.oracle.com/en/java/javase/19/docs/api/> tiene disponible al documentación de la API de java
