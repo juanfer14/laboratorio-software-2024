@@ -106,8 +106,11 @@ public class Delta extends Alpha {
 3.- Respecto de los constructores, analice los siguientes casos:
 
 3.1.- Escriba 3 subclases de la clase Vacuna(definida en el punto 1) llamadas VacunaPatogenoIntegro, VacunaSubunidadAntigenica y VacunaGenetica con las siguientes variables de instancias:
+
 ● VacunaPatogenoIntegro: define una variable de instancia destinada para el nombre del virus patógeno inactivado o atenuado.
+
 ● VacunaSubunidadAntigenica: define 2 variables de instancia, una para guardar la cantidad de antígenos de la vacuna y la otra para mantener el tipo de proceso llevado a cabo.
+
 ● VacunaGenetica: define dos variables de instancia, una para la temperatura mínima y otra para la temperatura máxima de almacenamiento.
 
 a) Implemente los getters y setters para cada una de las variables de instancias anteriores.
