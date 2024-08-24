@@ -26,3 +26,44 @@ public class Dialoguito extends Dialog {
 ~~~
 
 <ins>Nota</ins>: Recuerde que en la url <https://docs.oracle.com/en/java/javase/19/docs/api/> tiene disponible al documentación de la API de java
+
+3.3.- Las clases definidas a continuación establecen una relación de herencia. La implementación dada, ¿es correcta?.
+
+**<ins>Constructores privados<ins>**
+~~~
+package laboratorio;
+public class SuperClase {
+  private SuperClase() {
+  }
+}
+
+package laboratorio;
+public class SubClase extends SuperClase {
+  public SubClase() {
+  }
+}
+~~~
+
+**<ins>Constructores protegidos</ins>**
+~~~
+package laboratorio;
+public class SuperClase{
+  protected SuperClase(){
+  }
+}
+
+package laboratorio1;
+public class SubClase extends SuperClase {
+  public SubClase() {
+  }
+}
+
+package laboratorio1;
+public class OtraClase {
+  public OtraClase() {
+  }
+  public void getX() {
+    new SuperClase();
+  }
+}
+~~~
