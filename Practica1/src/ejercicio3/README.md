@@ -14,7 +14,10 @@ b) Implemente los constructores para las clases anteriores, todos ellos deben re
 
 c) ¿Pudo compilar las clases? ¿Qué problemas surgieron y por qué? ¿Cómo los solucionó?
 
+__Al principio no, ya que compile directamente los *.java de la carpeta 'ejercicio3', pero ademas se debe compilar los *.java de la carpeta 'ejercicio1' (en este caso Vacuna.java)__
+
 3.2.- El siguiente código, define una subclase de java.awt.Dialog. Verifique si compila. Si no lo hace implemente una solución.
+
 ~~~
 package laboratorio;
 import java.awt.Dialog;
@@ -25,11 +28,14 @@ public class Dialoguito extends Dialog {
 }
 ~~~
 
-<ins>Nota</ins>: Recuerde que en la url <https://docs.oracle.com/en/java/javase/19/docs/api/> tiene disponible al documentación de la API de java
+<ins>Nota</ins>: Recuerde que en la <a href="https://docs.oracle.com/en/java/javase/19/docs/api/">url</a> tiene disponible al documentación de la API de java
+
+**El codigo como esta no compila, es necesario agregarle como parametro un 'Frame' al constructor de Dialoguito y pasarselo a 'Dialog' a traves de super()**
 
 3.3.- Las clases definidas a continuación establecen una relación de herencia. La implementación dada, ¿es correcta?.
 
-**<ins>Constructores privados<ins>**
+<ins><b>Constructores privados</b></ins>
+
 ~~~
 package laboratorio;
 public class SuperClase {
@@ -44,7 +50,10 @@ public class SubClase extends SuperClase {
 }
 ~~~
 
-**<ins>Constructores protegidos</ins>**
+__No, ya que SubClase no puede instanciar SuperClase, porque su constructor es privado__
+
+<ins><b>Constructores protegidos</b></ins>
+
 ~~~
 package laboratorio;
 public class SuperClase{
@@ -67,3 +76,5 @@ public class OtraClase {
   }
 }
 ~~~
+
+__En ambas clases (SubClase y OtraClase) no se importa 'SuperClase' por lo tanto no se sera posible compilar los archivos__

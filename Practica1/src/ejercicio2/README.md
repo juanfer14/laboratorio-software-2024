@@ -21,7 +21,10 @@ class Gamma {
 }
 ~~~
 
+**No, ya que la clase Alpha tiene variables de instancias protected, y por ende solamente puede ser accedidos por las clases de la jerarquia**
+
 b) Considere la siguiente modificación de la clase Alpha. ¿Son válidos los accesos en la clase Beta?. Justifique.
+
 ~~~
 package griego;
 public class Alpha {
@@ -42,7 +45,11 @@ class Beta {
 }
 ~~~
 
+**Si son validos, porque la clase y sus miembros son publicos**
+
+
 c) Modifique la clase Alpha como se indica debajo. ¿Es válido el método de la clase Beta?. Justifique.
+
 ~~~
 package griego;
 public class Alpha {
@@ -63,13 +70,18 @@ class Beta {
 }
 ~~~
 
+**No es valido, ya que los miembros de Alpha estan defindos en su package**
+
 
 d) Considere el inciso c) ¿Es válido el acceso a la variable de instancia x y al método de instancia unMetodoA() desde una subclase de Alpha perteneciente al paquete romano?. Justifique.
 
+**No, ya que esos miembros son de alcance package y aunque sea subclase de Alpha, no tendra acceso a esos miembros**
+
 e) Analice el método de la clase Delta. ¿Es válido? Justifique analizando cómo influye el control de acceso protected en la herencia de clases.
+
 ~~~
 package griego;
-  public class Alpha {
+public class Alpha {
   protected int x;
   protected void otroMetodoA(){
     System.out.println(“Un método protegido”);
@@ -87,3 +99,5 @@ public class Delta extends Alpha {
   }
 }
 ~~~
+
+**Como Delta hereda de una clase que esta en otro paquete, entonces solamente tendra acceso a los miembros publicos. Por lo tanto, no pasara la compilacion**
