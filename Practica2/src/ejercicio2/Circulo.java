@@ -1,4 +1,4 @@
-package ejercicio5;
+package ejercicio2;
 import java.lang.Math;
 public class Circulo extends FiguraGeometrica {
 	private int radio;

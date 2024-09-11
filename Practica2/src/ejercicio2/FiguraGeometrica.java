@@ -1,6 +1,8 @@
-package ejercicio5;
+package ejercicio2;
 
-public abstract class FiguraGeometrica {
+import ejercicio2.FiguraGeometrica;
+
+public abstract class FiguraGeometrica implements Comparable<FiguraGeometrica>{
 	private String color;
 	public FiguraGeometrica() {}
 	public abstract void dibujar();
@@ -12,6 +14,9 @@ public abstract class FiguraGeometrica {
 		return color;
 	}
 	
-	
+	@Override
+	public int compareTo(FiguraGeometrica f) {
+		return this.area() - f.area();
+	}
 }
 	
