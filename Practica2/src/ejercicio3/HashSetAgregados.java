@@ -2,8 +2,9 @@ package ejercicio3;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Set;
 
-public class HashSetAgregados<E> extends HashSet<E> {
+public abstract class HashSetAgregados<E> extends HashSet<E> {
     private int cantidadAgregados = 0;
     public HashSetAgregados() {
     }
@@ -13,12 +14,16 @@ public class HashSetAgregados<E> extends HashSet<E> {
     }
     
     @Override public boolean add(E e) {
-        cantidadAgregados++;
-        return super.add(e);
+        //cantidadAgregados++;
+        if(super.add(e)) {
+        	cantidadAgregados++;
+        	return true;
+        } 
+        return false;
     }
     
     @Override public boolean addAll(Collection<? extends E> c) {
-        cantidadAgregados += c.size();
+        //cantidadAgregados += c.size();
         return super.addAll(c);
     }
     
