@@ -21,7 +21,7 @@ class Gamma {
 }
 ~~~
 
-**No, ya que la clase Alpha tiene variables de instancias protected, y por ende solamente puede ser accedidos por las clases de la jerarquia**
+**Si es valido, ya que los miembros protected son accesibles dentro del mismo paquete, sin necesidad de tener una relacion de herencia**
 
 b) Considere la siguiente modificación de la clase Alpha. ¿Son válidos los accesos en la clase Beta?. Justifique.
 
