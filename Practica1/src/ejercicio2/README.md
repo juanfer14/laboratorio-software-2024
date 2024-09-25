@@ -100,4 +100,4 @@ public class Delta extends Alpha {
 }
 ~~~
 
-**Como Delta hereda de una clase que esta en otro paquete, entonces solamente tendra acceso a los miembros publicos. Por lo tanto, no pasara la compilacion**
+**Como Delta hereda de una clase que esta en otro paquete, entonces solamente tendra acceso a los miembros publicos y protected. El objeto Alpha, que es de otro paquete, no tiene alcance de sus miembros (tanto atributos como metodos), mientra que el objeto Delta, si, ya que sus miembros (atributos y metodo) son parte del mismo.**
