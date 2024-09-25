@@ -30,8 +30,7 @@ __No, ya que hay una referencia ambiguedad para la variable estatica 'AMARILLO' 
 
 __Luego las variables que no tienen sobreescritura se heredan una unica vez__
 
-b) Analice el código de la interface y las clases que la implementan. Determine si son legales o no. En caso de ser necesario, realice las correcciones que
-correspondan. ¿Cómo podría modificar el método afinar() para evitar realizar cambios en las clases que implementan InstrumentoMusical ?
+b) Analice el código de la interface y las clases que la implementan. Determine si son legales o no. En caso de ser necesario, realice las correcciones que correspondan. ¿Cómo podría modificar el método afinar() para evitar realizar cambios en las clases que implementan InstrumentoMusical ?
 
 ```
 public interface InstrumentoMusical {
@@ -61,13 +60,21 @@ class InstrumentoDeCuerda implements InstrumentoMusical {
 }
 ```
 
-__No son legales en las clases 'InstrumentoDeViento' y 'IntrumnetoDeCuerda', ya que:__
-* El modificador de acceso del metodo 'hacerSonar' es package, cuando deberia se public.
-* Falta implementar el metodo 'afinar()' en la clase 'InstrumentoDeCuerda'
+__No son legales en las clases 'InstrumentoDeViento' y 'IntrumentoDeCuerda', ya que:__
+* El especificador de acceso del metodo 'hacerSonar' es package, tanto en 'InstrumentoDeViento' como en 'InstrumentoDeCuerda' cuando deberia se public o uno mas permisivo.
+* No es posible implementar un metodo en una interfaz (a partir de JAVA 8 si, con 'default').
+* La palabra clave 'abstract' en InstrumentoDeViento esta mal colocada.
+* La clase 'InstrumentoDeCuerda' deberia implementar 'afinar()' (la clase 'InstrumentoDeViento' al ser abstracta, no necesita implementarlo).
 
 __Modificaciones:__
 
 ```
+public interface InstrumentoMusical {
+	void hacerSonar();
+	String queEs();
+	default void afinar(){}
+}
+
 class abstract InstrumentoDeViento implements InstrumentoMusical {
 	public void hacerSonar(){
 		System.out.println("Sonar Vientos");
@@ -85,10 +92,6 @@ class InstrumentoDeCuerda implements InstrumentoMusical {
 	
 	public String queEs() {
 		return "Instrumento de Cuerda";
-	}
-	
-	public void afinar(){
-		System.out.println("Afinando instrumento de cuerda");
 	}
 }
 ```
