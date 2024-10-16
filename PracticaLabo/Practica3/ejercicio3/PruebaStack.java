@@ -2,7 +2,7 @@ package ejercicio3;
 
 import java.util.Iterator;
 
-public class Prueba {
+public class PruebaStack {
 	public static void main(String [] args) {
 		StringConverterSet<Integer> scs = new StringConverterSet<Integer>();
 		scs.agregar(1);
