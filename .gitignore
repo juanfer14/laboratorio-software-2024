@@ -3,3 +3,7 @@ PracticaLabo/.project
 PracticaLabo/.settings/org.eclipse.core.resources.prefs
 PracticaLabo/.settings/org.eclipse.jdt.core.prefs
 PracticaLabo/.gitignore
+/.classpath
+/.project
+/.DS_Store
+/bin/
